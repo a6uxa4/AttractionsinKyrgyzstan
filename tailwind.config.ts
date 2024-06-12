@@ -9,11 +9,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        Bishkek0: "url('/images/Bishkek0.jpeg')",
-        Bishkek1: "url('/images/Bishkek1.jpeg')",
-        Bishkek2: "url('/images/Bishkek2.jpeg')",
-      },
+      backgroundImage: {},
     },
   },
   plugins: [],

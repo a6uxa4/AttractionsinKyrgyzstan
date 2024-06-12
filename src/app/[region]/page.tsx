@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCreative } from "swiper/modules";
 import { usePathname } from "next/navigation";
 import { GENERATE_DATA } from "@/utils/constants";
-import path from "path";
+import Image from "next/image";
 
 export default function Home() {
   const pathname = usePathname();
@@ -27,12 +27,13 @@ export default function Home() {
       >
         {GENERATE_DATA[pathname.slice(1)].map((item, index) => (
           <SwiperSlide key={index}>
-            <div
-              className={`w-full h-full rounded-md relative bg-${pathname.slice(
-                1
-              )}${index}`}
-            >
-              <h2 className="absolute text-[30px] bottom-[100px] left-5">
+            <div className={`w-full h-full rounded-md relative`}>
+              <img
+                src={`/images/${pathname.slice(1)}${index}.jpeg`}
+                alt={item.title}
+                className="w-full h-full object-cover rounded-md"
+              />
+              <h2 className="absolute text-[30px] bottom-[100px] left-5 bg-black/50 p-1 rounded-lg">
                 {item.title}
               </h2>
               <p className="absolute text-[20px] bottom-10 left-5 bg-black/50 p-1 rounded-lg">

@@ -42,7 +42,6 @@ export const GENERATE_DATA: GenerateData = {
     {
       title: "Бишкек",
       description: "Столица Кыргызстана, живописный город на Шелковом пути",
-      img: "/images/Bishkek0.jpeg",
     },
     {
       title: "Государственный исторический музей",
